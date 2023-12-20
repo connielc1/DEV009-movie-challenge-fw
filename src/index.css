@@ -39,6 +39,20 @@ h1 {
 
 ul {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+li {
+  gap: 5px;
+  padding: 10px;
+}
+
+img {
+  max-width: 200%;
+  max-height: 400px;
+  margin-bottom: 5px;
 }
 
 button {
@@ -76,4 +90,33 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Pantalla mediana*/
+@media screen and (max-width: 767px) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Pantalla pequeña */
+@media screen and (max-width: 480px) {
+  ul {
+    display: block;
+
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
 }
